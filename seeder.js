@@ -23,6 +23,7 @@
   //     name: "Admin",
   //     email: "chimezieokwuosah@gmail.com",
   //     password: "Admin123", 
+          // isConfirmed: "true",
   //     isAdmin: true;
   //   });
 
