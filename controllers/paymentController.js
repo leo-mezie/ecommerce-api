@@ -1,5 +1,6 @@
 import axios from 'axios';
-import Order from '../models/orderModels.js';
+import Payment from "../models/paymentModel.js";
+
 
 export const initiatePayment = async (req, res) => {
   const { email, amount, orderId } = req.body;
@@ -31,6 +32,18 @@ export const verifyPayment = async (req, res) => {
       order.paymentResult = response.data.data;
       order.status = "Paid";
       await order.save();
+
+      // Save payment record
+      await Payment.create({
+        orderId,
+        reference,
+        amount: response.data.data.amount / 100, // convert kobo back to naira
+        email: response.data.data.customer.email,
+        status: "success",
+        transactionId: response.data.data.id,
+        paymentResult: response.data.data,
+      });
+
       res.json({ message: "Payment successful", order });
     } else {
       res.status(400).json({ message: "Payment not successful" });
@@ -39,3 +52,4 @@ export const verifyPayment = async (req, res) => {
     res.status(500).json({ message: "Payment verification failed", error: error.message });
   }
 };
+

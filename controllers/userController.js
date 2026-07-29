@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken';
 
 // Generate JWT
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '1hr' });
+  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '24hr' });
 };
 
 // Register
@@ -163,20 +163,50 @@ export const getUserProfile = async (req, res) => {
   res.json(req.user);
 };
 
+// get single user (admin only)
+export const getSingleUser = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id).select("-password");
+    if (!user) return res.status(404).json({ message: "User not found" });
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching user", error });
+  }
+};
+
 // Get all users (admin only)
 export const getAllUsers = async (req, res) => {
-  const users = await User.find().select("-password");
-  res.json(users);
+  try {
+    const users = await User.find().select("-password");
+    if (!users || users.length === 0) {
+      return res.status(404).json({ message: "No users found" });
+    }
+    return res.status(200).json({message: "Users retrieved successfully",users});
+  } catch (error) {
+    return res.status(500).json({ message: "Error fetching users", error: error.message });
+  }
 };
 
 // Update user role (admin only)
 export const updateUserRole = async (req, res) => {
-  const user = await User.findById(req.params.id);
-  if (user) {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
     user.isAdmin = req.body.isAdmin;
     await user.save();
-    res.json(user);
-  } else {
-    res.status(404).json({ message: "User not found" });
+    // Fetch updated user without password
+    const updatedUser = await User.findById(user._id).select("-password");
+    return res.status(200).json({
+      message: "User role updated successfully",
+      user:updatedUser
+    });
+  } catch (error) {
+    return res.status(500).json({message: "Error updating user role",error: error.message});
   }
 };
+
+
