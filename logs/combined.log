@@ -1,0 +1,48 @@
+{"level":"info","message":"Database Connected","timestamp":"2026-08-06T10:12:56.460Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:12:56.472Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:12:56.472Z"}
+{"doc":{},"level":"info","message":"MongoDB users.findOne","query":{"email":"chimezieokwuosah@gmail.com"},"timestamp":"2026-08-06T10:13:48.128Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:13:48.128Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:13:48 +0000] \"POST /api/users/login HTTP/1.1\" 401 39 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:13:48.208Z"}
+{"doc":{},"level":"info","message":"MongoDB users.findOne","query":{"email":"chimezieokwuosah@gmail.com"},"timestamp":"2026-08-06T10:14:39.714Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:14:39.714Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:14:39 +0000] \"POST /api/users/login HTTP/1.1\" 200 303 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:14:39.794Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:17:33.090Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:17:33.093Z"}
+{"level":"info","message":"Server running on port :7000","timestamp":"2026-08-06T10:23:45.161Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:23:45.194Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:23:45.194Z"}
+{"level":"info","message":"Server running on port :7000","timestamp":"2026-08-06T10:27:07.274Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:27:07.312Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:27:07.312Z"}
+{"level":"info","message":"7000","timestamp":"2026-08-06T10:28:49.232Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:28:49.268Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:28:49.269Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:29:48.149Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:29:48.152Z"}
+{"doc":{},"level":"info","message":"MongoDB users.findOne","query":{"email":"chimezieokwuosah@gmail.com"},"timestamp":"2026-08-06T10:30:01.713Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:01.715Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:30:01 +0000] \"POST /api/users/login HTTP/1.1\" 200 303 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:30:01.822Z"}
+{"doc":{"projection":{"password":0}},"level":"info","message":"MongoDB users.findOne","query":{"_id":"6a6245d4e11b53fb9ed0f707"},"timestamp":"2026-08-06T10:30:21.760Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:21.760Z"}
+{"doc":{"projection":{"password":0}},"level":"info","message":"MongoDB users.find","query":{},"timestamp":"2026-08-06T10:30:21.783Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:21.783Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:30:21 +0000] \"GET /api/users/ HTTP/1.1\" 200 430 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:30:21.803Z"}
+{"doc":{"projection":{"password":0}},"level":"info","message":"MongoDB users.findOne","query":{"_id":"6a6245d4e11b53fb9ed0f707"},"timestamp":"2026-08-06T10:30:59.245Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:59.245Z"}
+{"doc":{},"level":"info","message":"MongoDB orders.find","query":{},"timestamp":"2026-08-06T10:30:59.249Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:59.249Z"}
+{"doc":{"projection":{"email":1,"id":1,"name":1}},"level":"info","message":"MongoDB users.find","query":{"_id":{"$in":["6a63a1d17f05b6ba56a2be2e","6a63a1d17f05b6ba56a2be30"]}},"timestamp":"2026-08-06T10:30:59.290Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:30:59.291Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:30:59 +0000] \"GET /api/orders/ HTTP/1.1\" 200 999 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:30:59.314Z"}
+{"doc":{"projection":{"password":0}},"level":"info","message":"MongoDB users.findOne","query":{"_id":"6a6245d4e11b53fb9ed0f707"},"timestamp":"2026-08-06T10:36:00.971Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:36:00.972Z"}
+{"doc":{"projection":{"password":0}},"level":"info","message":"MongoDB users.find","query":{},"timestamp":"2026-08-06T10:36:00.975Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:36:00.975Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [06/Aug/2026:10:36:00 +0000] \"GET /api/users/ HTTP/1.1\" 200 430 \"-\" \"Thunder Client (https://www.thunderclient.com)\"","timestamp":"2026-08-06T10:36:00.978Z"}
+{"level":"info","message":"Server running on port :7000","timestamp":"2026-08-06T10:36:59.021Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:36:59.060Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:36:59.061Z"}
+{"level":"info","message":"Server running on port :7000","timestamp":"2026-08-06T10:38:50.093Z"}
+{"doc":{"unique":true},"level":"info","message":"MongoDB users.createIndex","query":{"email":1},"timestamp":"2026-08-06T10:38:50.125Z"}
+{"level":"info","message":"Connected to DB","timestamp":"2026-08-06T10:38:50.126Z"}
